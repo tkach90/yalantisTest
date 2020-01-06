@@ -5,6 +5,7 @@ import dateToMonth from "../helpers/dateToMonth";
 
 class App extends Component {
     monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
     constructor(props) {
         super(props);
         this.state = {
@@ -19,7 +20,7 @@ class App extends Component {
                 this.setState({ users: response.data });
             })
             .catch((error) => {
-                console.log(error);
+                console.error(error);
             });
     }
 
@@ -42,11 +43,11 @@ class App extends Component {
 
         if ( length < 3 ) {
             return 'gray';
-        } else if ( 2 < length < 7) {
+        } else if ( length > 2 && length < 7) {
             return 'blue';
-        } else if ( 6 < length < 11) {
+        } else if (length > 6 && length < 11) {
             return 'green';
-        } else if ( 10 < length) {
+        } else if (length > 10) {
             return 'red';
         }
     };
@@ -57,15 +58,14 @@ class App extends Component {
         return (
             <>
                 <div>
-                    {users && this.monthNames.map(month =>
-                        {console.log('month', month)}
-                            // <div
-                            //     onMouseOver={this.setMonth}
-                            //     onMouseOut={this.clearMonth}
-                            //     className={this.setColor(month)}
-                            // >
-                            //     {month}
-                            // </div>
+                    {!!users.length && this.monthNames.map(month =>
+                        <div
+                            onMouseOver={this.setMonth}
+                            onMouseOut={this.clearMonth}
+                            className={this.setColor(month)}
+                        >
+                            {month}
+                        </div>
                     )}
                 </div>
                 {this.state.filteredUsers && this.state.filteredUsers.map(user =>
