@@ -12,6 +12,7 @@ class App extends Component {
         this.state = {
             users: [],
             filteredUsers: [],
+            hovered: false,
         }
     }
 
@@ -29,11 +30,10 @@ class App extends Component {
         this.setState({ filteredUsers: this.state.users.filter((user) => {
                 return event.target.innerText === dateToMonth(user.dob);
             })
-        });
-
+        ,  hovered: true});
     };
 
-    clearMonth = () => this.setState({ filteredUsers: [] });
+    clearMonth = () => { this.setState({ filteredUsers: [], hovered: false }) };
 
     setColor = (month) => {
         const { users } = this.state;
@@ -55,7 +55,8 @@ class App extends Component {
 
     render() {
         const { users, filteredUsers } = this.state;
-
+        const { hovered } = this.state;
+        const style = hovered ? { display: "none"} : {};
         return (
             <>
                 <MonthWrapper>
@@ -70,7 +71,19 @@ class App extends Component {
                         </div>
                     )}
                 </MonthWrapper>
-                {filteredUsers && filteredUsers.map(user =>
+                {!!users && users.map(user =>
+                    <UsersWrapper
+                        key={user.id}
+                        style={style}
+                    >
+                        {user.firstName}
+                        {' '}
+                        {user.lastName}
+                        {': '}
+                        {user.dob}
+                    </UsersWrapper>
+                )}
+                {!!filteredUsers && filteredUsers.map(user =>
                     <UsersWrapper key={user.id}>
                         {user.firstName}
                         {' '}
