@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e54a053c-9d38-4a05-81cb-8db1ed748330" name="Default Changelist" comment="add">
+    <list default="true" id="e54a053c-9d38-4a05-81cb-8db1ed748330" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/yalantis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/axiosConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/axiosConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/ServiceXHR.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +45,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Администратор\WebstormProjects\yalantis\src\helpers" />
       <recent name="C:\Users\Администратор\WebstormProjects\yalantis\src\components" />
       <recent name="C:\Users\Администратор\WebstormProjects\yalantis\src\apis" />
     </key>
@@ -92,7 +90,8 @@
       <workItem from="1578215083347" duration="22958000" />
       <workItem from="1578323492419" duration="866000" />
       <workItem from="1578374727232" duration="4911000" />
-      <workItem from="1578422552481" duration="4952000" />
+      <workItem from="1578422552481" duration="5748000" />
+      <workItem from="1578546795089" duration="2711000" />
     </task>
     <task id="LOCAL-00001" summary="output user list using axios, made user selection by month from date of birth using moment js, start to implement color changing logic">
       <created>1578299758468</created>
@@ -108,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578337315261</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create axios config, add stylization using styled components">
+      <created>1578462791080</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578462791080</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,17 +123,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="output user list using axios, made user selection by month from date of birth using moment js, start to implement color changing logic" />
     <MESSAGE value="fix condition operator mistake" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix condition operator mistake" />
+    <MESSAGE value="create axios config, add stylization using styled components" />
+    <option name="LAST_COMMIT_MESSAGE" value="create axios config, add stylization using styled components" />
   </component>
   <component name="WindowStateProjectService">
     <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578422281816">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1578422281816" />
-    <state x="647" y="69" width="769" height="748" key="CommitChangelistDialog2" timestamp="1578444224149">
+    <state x="316" y="37" width="1240" height="863" key="CommitChangelistDialog2" timestamp="1578462790287">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="647" y="69" width="769" height="748" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1578444224149" />
+    <state x="316" y="37" width="1240" height="863" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1578462790287" />
     <state x="634" y="204" key="FileChooserDialogImpl" timestamp="1578299091850">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -140,10 +147,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="370" y="55" width="966" height="760" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1578422534433" />
-    <state x="446" y="191" key="Vcs.Push.Dialog.v2" timestamp="1578337327794">
+    <state x="446" y="191" key="Vcs.Push.Dialog.v2" timestamp="1578462793482">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="191" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1578337327794" />
+    <state x="446" y="191" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1578462793482" />
     <state x="662" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578241877396">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

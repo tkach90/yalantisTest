@@ -1,63 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import styled from 'styled-components';
 
-import axiosConfig from '../api/axiosConfig';
+import ServiceXHR from '../helpers/ServiceXHR';
 import dateToMonth from "../helpers/dateToMonth";
-
-const MonthWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;  
-    
-    div {
-        display: flex;
-        justify-content: center;
-        align-items: center;    
-        width: 100px;
-        height: 60px;
-        margin: 5px;
-        border-radius: 6px;
-        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 
-              -3px -3px 6px rgba(255, 255, 255, 0.3), 
-              inset 2px 2px 5px rgba(255, 255, 255, 0.3), 
-              inset -2px -2px 5px rgba(0, 0, 0, 0.3);
-    }
-    
-    .red {
-      background: red;
-      color: #fff;
-    }
-    
-    .green {
-      background: green;
-      color: #fff;
-    }
-    
-    .blue {
-      background: blue;
-      color: #fff;
-    }
-    
-    .gray {
-      background: gray;
-      color: #fff;
-    }
-`;
-
-
-const UsersWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 10px auto 0;
-  justify-content: center;
-  width: 400px;
-  padding: 3px 10px 3px;
-  border-radius: 10px;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 
-              -3px -3px 6px rgba(255, 255, 255, 0.3), 
-              inset 2px 2px 5px rgba(255, 255, 255, 0.3), 
-              inset -2px -2px 5px rgba(0, 0, 0, 0.3);
-`;
+import { UsersWrapper, MonthWrapper } from './styles';
 
 class App extends Component {
     monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -71,7 +16,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        axiosConfig.get('/users' )
+        ServiceXHR.get('/users')
             .then(response => {
                 this.setState({ users: response.data });
             })
@@ -109,7 +54,7 @@ class App extends Component {
     };
 
     render() {
-        const { users } = this.state;
+        const { users, filteredUsers } = this.state;
 
         return (
             <>
@@ -125,7 +70,7 @@ class App extends Component {
                         </div>
                     )}
                 </MonthWrapper>
-                {this.state.filteredUsers && this.state.filteredUsers.map(user =>
+                {filteredUsers && filteredUsers.map(user =>
                     <UsersWrapper key={user.id}>
                         {user.firstName}
                         {' '}
