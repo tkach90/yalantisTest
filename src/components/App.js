@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import moment from "moment";
 
 import ServiceXHR from '../helpers/ServiceXHR';
 import dateToMonth from "../helpers/dateToMonth";
+
 import { UsersWrapper, MonthWrapper } from './styles';
 
 class App extends Component {
@@ -57,6 +59,7 @@ class App extends Component {
         const { users, filteredUsers } = this.state;
         const { hovered } = this.state;
         const style = hovered ? { display: "none"} : {};
+
         return (
             <>
                 <MonthWrapper>
@@ -80,7 +83,7 @@ class App extends Component {
                         {' '}
                         {user.lastName}
                         {': '}
-                        {user.dob}
+                        {moment(user.dob).format('LL')}
                     </UsersWrapper>
                 )}
                 {!!filteredUsers && filteredUsers.map(user =>
@@ -89,7 +92,7 @@ class App extends Component {
                         {' '}
                         {user.lastName}
                         {': '}
-                        {user.dob}
+                        {moment(user.dob).format('LL')}
                     </UsersWrapper>
                 )}
             </>
