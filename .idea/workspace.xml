@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e54a053c-9d38-4a05-81cb-8db1ed748330" name="Default Changelist" comment="transform date to readable format">
+    <list default="true" id="e54a053c-9d38-4a05-81cb-8db1ed748330" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -42,6 +43,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Администратор\WebstormProjects\yalantis\src\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Администратор\WebstormProjects\yalantis\src\helpers" />
       <recent name="C:\Users\Администратор\WebstormProjects\yalantis\src\components" />
@@ -89,7 +93,7 @@
       <workItem from="1578323492419" duration="866000" />
       <workItem from="1578374727232" duration="4911000" />
       <workItem from="1578422552481" duration="5748000" />
-      <workItem from="1578546795089" duration="6398000" />
+      <workItem from="1578546795089" duration="9577000" />
     </task>
     <task id="LOCAL-00001" summary="output user list using axios, made user selection by month from date of birth using moment js, start to implement color changing logic">
       <created>1578299758468</created>
@@ -126,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578553042812</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="transform date to readable format">
+      <created>1578554586163</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1578554586163</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,17 +149,18 @@
     <MESSAGE value="create axios config, add stylization using styled components" />
     <MESSAGE value="transfer styles in separate file, transfer axios config to helpers" />
     <MESSAGE value="display default userlist when any month unhovered" />
-    <option name="LAST_COMMIT_MESSAGE" value="display default userlist when any month unhovered" />
+    <MESSAGE value="transform date to readable format" />
+    <option name="LAST_COMMIT_MESSAGE" value="transform date to readable format" />
   </component>
   <component name="WindowStateProjectService">
     <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578422281816">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1578422281816" />
-    <state x="316" y="37" width="1240" height="863" key="CommitChangelistDialog2" timestamp="1578554559073">
+    <state x="316" y="37" width="1240" height="863" key="CommitChangelistDialog2" timestamp="1578554585444">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="316" y="37" width="1240" height="863" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1578554559073" />
+    <state x="316" y="37" width="1240" height="863" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1578554585444" />
     <state x="634" y="204" key="FileChooserDialogImpl" timestamp="1578299091850">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -161,10 +173,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="370" y="55" width="966" height="760" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1578422534433" />
-    <state x="446" y="191" key="Vcs.Push.Dialog.v2" timestamp="1578553044917">
+    <state x="446" y="191" key="Vcs.Push.Dialog.v2" timestamp="1578554587570">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="191" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1578553044917" />
+    <state x="446" y="191" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1578554587570" />
     <state x="662" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578241877396">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

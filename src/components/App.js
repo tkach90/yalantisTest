@@ -4,7 +4,7 @@ import moment from "moment";
 import ServiceXHR from '../helpers/ServiceXHR';
 import dateToMonth from "../helpers/dateToMonth";
 
-import { UsersWrapper, MonthWrapper } from './styles';
+import { GlobalStyle, UsersWrapper, MonthWrapper, Box } from './styles';
 
 class App extends Component {
     monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -62,6 +62,7 @@ class App extends Component {
 
         return (
             <>
+                <GlobalStyle />
                 <MonthWrapper>
                     {!!users.length && this.monthNames.map((month, index) =>
                         <div
@@ -70,7 +71,9 @@ class App extends Component {
                             onMouseOut={this.clearMonth}
                             className={this.setColor(month)}
                         >
-                            {month}
+                            <Box>
+                                {month}
+                            </Box>
                         </div>
                     )}
                 </MonthWrapper>
